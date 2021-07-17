@@ -1,16 +1,16 @@
 // Use the map method to solve these problems!
 
-/*
-Input:
 
-[
-    { name: 'spot', type: 'dog' },
-    { name: 'rover', type: 'dog' },
-    { name: 'jumpy', type: 'frog' },
-    { name: 'einstein', type: 'cat' },
-]
+//Input:
 
-*/
+// [
+//     { name: 'spot', type: 'dog' },
+//     { name: 'rover', type: 'dog' },
+//     { name: 'jumpy', type: 'frog' },
+//     { name: 'einstein', type: 'cat' },
+// ]
+
+
 
 /*
 Output:
@@ -19,7 +19,8 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    return [];
+  
+  
 }
 
 /*
@@ -47,7 +48,8 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shout = arr.map(item => ({name: toUpperCase(), type: item.type}));
+    return shout;
 }
 
 
