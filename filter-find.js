@@ -1,6 +1,6 @@
 // Use the filter or find array methods to solve these problems
 
-/* 
+
 Input:
 [
     { 
@@ -50,11 +50,13 @@ Output:
         category: 'dairy'
     },
 ]
-*/
+
 
 export function getAllDairy(arr) {
-    return [];
-}
+    let dairyArray = arr.filter(items => items.category === 'dairy');
+    return dairyArray;
+    }
+    
 
 /*
 Output: 
@@ -69,7 +71,8 @@ Output:
 */
 
 export function getAllFruitsThatCostMoreThanTwo(arr) {
-    return [];
+    let moreThan = arr.filter(items => items.category === 'fruit' && items.price > 2);
+    return moreThan;
 }
 
 
@@ -84,7 +87,7 @@ Output:
 */
 
 export function findTheCheese(arr) {
-    return [];
+    return arr.find( items => items.id === 'cheese' );
 }
 
 
@@ -94,5 +97,6 @@ Output:
 */
 
 export function listNamesOfAllFruits(arr) {
-    return [];
-}
+    let allFruit = arr.filter(nameOfFruit => nameOfFruit.category === 'fruit');
+    return allFruit.map(nameOfFruit => nameOfFruit.id);
+    };

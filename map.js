@@ -3,12 +3,12 @@
 
 //Input:
 
-// [
-//     { name: 'spot', type: 'dog' },
-//     { name: 'rover', type: 'dog' },
-//     { name: 'jumpy', type: 'frog' },
-//     { name: 'einstein', type: 'cat' },
-// ]
+[
+    { name: 'spot', type: 'dog' },
+    { name: 'rover', type: 'dog' },
+    { name: 'jumpy', type: 'frog' },
+    { name: 'einstein', type: 'cat' },
+]
 
 
 
@@ -19,9 +19,13 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-  
-  
-}
+    let namesArray = [];
+    arr.map(item => {
+        namesArray.push(item.name)
+    });
+    return namesArray;
+    }
+   
 
 /*
 Output:
@@ -34,7 +38,8 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+   let hunger = arr.map( item => Object.assign(item, {isHungry: true}));
+   return hunger;
 }
 
 /*
@@ -47,10 +52,12 @@ Output:
     { name: 'EINSTEIN', type: 'cat' },
 ]*/
 
-export function makeShoutingArray(arr) {
-    const shout = arr.map(item => ({name: toUpperCase(), type: item.type}));
-    return shout;
-}
+ export function makeShoutingArray(arr) {
+        return arr.map(item => {return{'name': item.name.toUpperCase(), 'type': item.type}}
+        );
+    }
+    
+
 
 
 /*
@@ -60,8 +67,11 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map(item => item.name + item.type);
 }
+
+
+        
 
 /*
 Output:
@@ -86,5 +96,5 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+return arr.map(item => ([["name", item.name], ["type", item.type]]));
 }
