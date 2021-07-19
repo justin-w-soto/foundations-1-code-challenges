@@ -12,11 +12,11 @@ Input:
 
 /*
 Output:
-`8truckvroom`
+`wheelstypegoes`
 or
-`truckvroom8`
+`goeswheelstype`
 or
-`truck8vroom`
+`wheelsgoestype`
 ,
 etc
 
