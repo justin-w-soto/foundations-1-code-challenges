@@ -57,7 +57,7 @@ Output:
 ]
 */
 
-export function makeTuples(someObject) {
+//export function makeTuples(someObject) {
 //     let arr = [];
 //     return ;
 // }
